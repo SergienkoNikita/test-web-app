@@ -4,8 +4,25 @@
     <meta charset="UTF-8">
     <title>Test webapp</title>
     <script src="https://telegram.org/js/telegram-web-app.js"></script>
+    <style>
+        body {
+            background-color: #fff;
+        }
+    </style>
 </head>
 <body>
     <h1>Its web app testing</h1>
+
+    <p>Counter added</p>
+
+    <script>
+        window.onload = () => {
+          if (localStorage.getItem('count')) {
+            localStorage.setItem('count', (Number(localStorage.getItem('count')) + 1).toString())
+          } else {
+            localStorage.setItem('count', '1')
+          }
+        }
+    </script>
 </body>
 </html>
