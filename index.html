@@ -15,6 +15,8 @@
 
     <p>Counter added</p>
 
+    <div id="counterValue"></div>
+
     <script>
         window.onload = () => {
           if (localStorage.getItem('count')) {
@@ -22,6 +24,8 @@
           } else {
             localStorage.setItem('count', '1')
           }
+
+          document.getElementById('counterValue').innerText = `currenCount = ${localStorage.getItem('count')}`
         }
     </script>
 </body>
